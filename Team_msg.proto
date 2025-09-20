@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+message GenTeamWhisper {
+    int32 type = 1;
+    Nested2 data = 2;
+
+    message Nested2 {
+        int64 uid = 1;
+        int64 chat_id = 2;
+        string msg = 4;
+        int64 timestamp = 5;
+        int32 chat_type = 7;
+        uint32 Title = 8;
+        Nested9 field9 = 9;
+        string language = 10;
+        Nested13 field13 = 13;
+        Nested14 empty_field = 14;
+
+        message Nested14 {}
+
+        message Nested9 {
+            string Nickname = 1;
+            int64 avatar_id = 2;
+            int32 rank = 4;
+            int32 badge = 5;
+            string Clan_Name = 8;
+            int32 field10 = 10;
+            int32 global_rank_pos = 11;
+
+            NestedBadge badge_info = 12;
+            NestedPrime prime_info = 13;
+
+            message NestedBadge {
+                int32 value = 1;
+            }
+
+            message NestedPrime {
+                int32 prime_uid = 1;
+                int32 prime_level = 2;
+                string prime_hex = 3;
+            }
+        }
+
+        message Nested13 {
+            int32 url_type = 2;
+            int32 url_platform = 3;
+        }
+    }
+}

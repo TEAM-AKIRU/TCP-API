@@ -1,0 +1,7 @@
+pycryptodome
+aiohttp
+protobuf
+Flask[async]
+protobuf_decoder
+pytz
+motor
